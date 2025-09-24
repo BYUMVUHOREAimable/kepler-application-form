@@ -140,6 +140,33 @@ input:focus, select:focus {
   width: 100%;
   font-size: 1.1rem;
   margin-top: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  display: none;
+  border: 3px solid #fff;
+  border-top: 3px solid #0b76ef;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  animation: spin 0.8s linear infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.submitting .btn-text {
+  display: none;
+}
+
+.submitting .loader {
+  display: inline-block;
 }
 
 /* Thank you page */
@@ -151,35 +178,15 @@ input:focus, select:focus {
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease;
 }
 
 .thankyou-container h1 {
-  color: green;
+  font-size: 2rem;
+  color: #0b76ef;
   margin-bottom: 20px;
 }
 
-.btn-link {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #0b76ef;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-}
-
-.btn-link:hover {
-  background: #094f9a;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .progress-step::after {
-    font-size: 0.65rem;
-  }
-}
-
-/* Thank You Page Enhancements */
 .success-icon {
   font-size: 3rem;
   color: green;
@@ -198,13 +205,22 @@ input:focus, select:focus {
   100% { transform: scale(1); }
 }
 
-.thankyou-container h1 {
-  font-size: 2rem;
-  color: #0b76ef;
+.btn-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #0b76ef;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
 }
 
-.thankyou-container p {
-  margin: 10px 0;
-  font-size: 1rem;
-  color: #444;
+.btn-link:hover {
+  background: #094f9a;
+}
+
+@media (max-width: 600px) {
+  .progress-step::after {
+    font-size: 0.65rem;
+  }
 }

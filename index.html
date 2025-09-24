@@ -9,10 +9,10 @@
 <body>
   <div class="container">
 
-    <h1>Kepler College Application</h1>
+    <h1>🎓 Kepler College Application</h1>
 
     <div class="notice">
-      <strong>Important:</strong> After submitting, also send your scanned documents 
+      <strong>📌 Important:</strong> After submitting, also send your scanned documents 
       (S4–S6 results, diploma/slip, and National ID copy) 
       to WhatsApp: <strong>0796004898</strong>.
     </div>
@@ -28,7 +28,7 @@
       <div class="progress-step" data-title="Agreement"></div>
     </div>
 
-    <!-- Replace YOUR_FORM_ID with your Formspree endpoint -->
+    <!-- Form -->
     <form id="applicationForm" action="https://formspree.io/f/mjkavdwa" method="POST">
 
       <!-- Step 1: Personal -->
@@ -184,7 +184,10 @@
 
         <div class="btns">
           <button type="button" class="btn prev-btn">Back</button>
-          <button type="submit" class="btn submit-btn">Submit</button>
+          <button type="submit" class="btn submit-btn">
+            <span class="btn-text">Submit</span>
+            <span class="loader"></span>
+          </button>
         </div>
       </div>
     </form>
