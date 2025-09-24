@@ -1,0 +1,210 @@
+/* Base */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #0b76ef;
+}
+
+.notice {
+  background: #e6f2ff;
+  border-left: 5px solid #0b76ef;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+/* Progress Bar */
+.progressbar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 30px 0;
+}
+
+.progressbar::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #d3d3d3;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.progress {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  background: #0b76ef;
+  width: 0%;
+  transform: translateY(-50%);
+  transition: 0.4s ease;
+}
+
+.progress-step {
+  width: 25px;
+  height: 25px;
+  background: #d3d3d3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.progress-step.active {
+  background: #0b76ef;
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: 35px;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+/* Form */
+form {
+  width: 100%;
+}
+
+.form-step {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.form-step.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 600;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  transition: border 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #0b76ef;
+  outline: none;
+}
+
+.btn {
+  padding: 12px 18px;
+  background: #0b76ef;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 10px 5px 0 0;
+}
+
+.btn:hover {
+  background: #094f9a;
+}
+
+.submit-btn {
+  width: 100%;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+/* Thank you page */
+.thankyou-container {
+  max-width: 600px;
+  margin: 80px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.thankyou-container h1 {
+  color: green;
+  margin-bottom: 20px;
+}
+
+.btn-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #0b76ef;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.btn-link:hover {
+  background: #094f9a;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .progress-step::after {
+    font-size: 0.65rem;
+  }
+}
+
+/* Thank You Page Enhancements */
+.success-icon {
+  font-size: 3rem;
+  color: green;
+  background: #e6ffe6;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  margin: 0 auto 20px;
+  animation: pop 0.6s ease forwards;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  70% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.thankyou-container h1 {
+  font-size: 2rem;
+  color: #0b76ef;
+}
+
+.thankyou-container p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #444;
+}

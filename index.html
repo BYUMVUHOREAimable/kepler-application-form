@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kepler College Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <h1>Kepler College Application</h1>
+
+    <div class="notice">
+      <strong>Important:</strong> After submitting, also send your scanned documents 
+      (S4–S6 results, diploma/slip, and National ID copy) 
+      to WhatsApp: <strong>0796004898</strong>.
+    </div>
+
+    <!-- Progress bar -->
+    <div class="progressbar">
+      <div class="progress" id="progress"></div>
+      <div class="progress-step active" data-title="Personal"></div>
+      <div class="progress-step" data-title="Contact"></div>
+      <div class="progress-step" data-title="Guardian"></div>
+      <div class="progress-step" data-title="Education"></div>
+      <div class="progress-step" data-title="Program"></div>
+      <div class="progress-step" data-title="Agreement"></div>
+    </div>
+
+    <!-- Replace YOUR_FORM_ID with your Formspree endpoint -->
+    <form id="applicationForm" action="https://formspree.io/f/mjkavdwa" method="POST">
+
+      <!-- Step 1: Personal -->
+      <div class="form-step active">
+        <h2>Personal Information</h2>
+        <label>Email *</label>
+        <input type="email" name="email" required placeholder="Enter your email">
+
+        <label>Full Names *</label>
+        <input type="text" name="fullName" required placeholder="Enter your full name">
+
+        <label>Date of Birth *</label>
+        <input type="date" name="dob" required>
+
+        <label>Gender *</label>
+        <select name="gender" required>
+          <option value="">Select</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+
+        <label>National Identity Card (Irangamuntu) *</label>
+        <input type="text" name="nid" required placeholder="Enter National ID">
+
+        <label>Place of Birth *</label>
+        <input type="text" name="birthPlace" required placeholder="Enter birthplace">
+
+        <label>Place of Residence *</label>
+        <input type="text" name="residence" required placeholder="Enter residence">
+
+        <label>Are you refugee? *</label>
+        <select name="refugee" required>
+          <option value="">Select</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+
+        <button type="button" class="btn next-btn">Next</button>
+      </div>
+
+      <!-- Step 2: Contact -->
+      <div class="form-step">
+        <h2>Contact Information</h2>
+        <label>Your Phone Number *</label>
+        <input type="tel" name="phone" required placeholder="Enter phone number">
+
+        <label>Alternative/Secondary Phone Number *</label>
+        <input type="tel" name="altPhone" required placeholder="Enter alternative phone">
+
+        <label>Guardian Phone Number *</label>
+        <input type="tel" name="guardianPhone" required placeholder="Enter guardian phone">
+
+        <div class="btns">
+          <button type="button" class="btn prev-btn">Back</button>
+          <button type="button" class="btn next-btn">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Guardian -->
+      <div class="form-step">
+        <h2>Guardian Information</h2>
+        <label>Mother or Female Guardian’s Full Name *</label>
+        <input type="text" name="motherName" required placeholder="Enter mother's full name">
+
+        <label>Father or Male Guardian’s Full Name *</label>
+        <input type="text" name="fatherName" required placeholder="Enter father's full name">
+
+        <div class="btns">
+          <button type="button" class="btn prev-btn">Back</button>
+          <button type="button" class="btn next-btn">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 4: Education -->
+      <div class="form-step">
+        <h2>Education Background</h2>
+        <label>Year of S6 Completion *</label>
+        <input type="number" name="s6Year" required placeholder="Enter year">
+
+        <label>Your Combinations *</label>
+        <input type="text" name="combinations" required placeholder="Enter your combinations">
+
+        <label>Other Certificate (if any)</label>
+        <input type="text" name="certificate" placeholder="Enter certificate name">
+
+        <label>How Many Principal Passes Obtained *</label>
+        <input type="number" name="principalPasses" required placeholder="Number of passes">
+
+        <label>National Examination Results in Percentage *</label>
+        <input type="text" name="examPercent" required placeholder="e.g. 74.5%">
+
+        <label>Senior 4 Grades (%) *</label>
+        <input type="text" name="s4Grade" required placeholder="Enter S4 grades">
+
+        <label>Senior 5 Grades (%) *</label>
+        <input type="text" name="s5Grade" required placeholder="Enter S5 grades">
+
+        <label>Senior 6 Grades (%) *</label>
+        <input type="text" name="s6Grade" required placeholder="Enter S6 grades">
+
+        <label>Your Grade or Marks *</label>
+        <input type="text" name="marks" required placeholder="Enter your marks">
+
+        <label>Your Previous School *</label>
+        <input type="text" name="prevSchool" required placeholder="Enter previous school">
+
+        <div class="btns">
+          <button type="button" class="btn prev-btn">Back</button>
+          <button type="button" class="btn next-btn">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 5: Program -->
+      <div class="form-step">
+        <h2>Program Information</h2>
+        <label>Department or Faculty *</label>
+        <select name="department" required>
+          <option value="">Select</option>
+          <option>Project Management</option>
+          <option>Business Analytics</option>
+        </select>
+
+        <label>Have you taken Iteme program offered by Kepler?</label>
+        <select name="iteme">
+          <option value="">Select</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+
+        <label>Have you applied to Kepler College before? *</label>
+        <select name="appliedBefore" required>
+          <option value="">Select</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+
+        <div class="btns">
+          <button type="button" class="btn prev-btn">Back</button>
+          <button type="button" class="btn next-btn">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 6: Agreement -->
+      <div class="form-step">
+        <h2>Agreement</h2>
+        <label>
+          <input type="checkbox" name="agreement" required>
+          I agree to pay the service fee of 3000 FRW after application completion *
+        </label>
+
+        <!-- Redirect -->
+        <input type="hidden" name="_redirect" value="thankyou.html">
+
+        <div class="btns">
+          <button type="button" class="btn prev-btn">Back</button>
+          <button type="submit" class="btn submit-btn">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

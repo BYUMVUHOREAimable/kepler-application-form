@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Submitted</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="thankyou-container">
+    <div class="success-icon">✔</div>
+    <h1>Thank You!</h1>
+    <p>Your Kepler College Application has been submitted successfully.</p>
+    <p>Please remember to send your scanned documents (S4–S6 results, diploma/slip, and National ID copy) to WhatsApp: 
+      <strong>0796004898</strong>.
+    </p>
+    <a href="index.html" class="btn-link">Back to Application</a>
+  </div>
+
+  <!-- Confetti Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    // Launch confetti after page loads
+    window.onload = () => {
+      const duration = 3 * 1000;
+      const end = Date.now() + duration;
+
+      (function frame() {
+        confetti({
+          particleCount: 5,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 }
+        });
+        confetti({
+          particleCount: 5,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 }
+        });
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      })();
+    };
+  </script>
+</body>
+</html>
